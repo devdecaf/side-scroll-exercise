@@ -44,6 +44,7 @@ collision_layer = 2
 script = ExtResource("1_g6k8r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=758503274]
+unique_name_in_owner = true
 position = Vector2(0, -128)
 sprite_frames = SubResource("SpriteFrames_rgyib")
 animation = &"idle"
