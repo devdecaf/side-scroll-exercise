@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 ### stats
 var speed = 40000
-var jumpstrength = -4000
+var jumpstrength = -1400
 var grav = 80000
 
 @onready var _animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			velocity.x = lerpf(velocity.x,0,0.1)
 	else:
-		velocity.y = lerpf(velocity.y,grav * delta,0.1)
+		velocity.y = lerpf(velocity.y,grav * delta,0.03)
 		if movedir:
 			velocity.x = lerpf(velocity.x,movedir * speed * delta,0.1)
 		else:
